@@ -1,0 +1,37 @@
+void main() 
+{ /********* Question No. 1 ************/ 
+print("Question No. 1: Hello DART Program"); 
+var variable = "Hello DART"; 
+print(variable); 
+/********* Question No. 2 ************/ 
+print("Question No. 2: Printing two integars in single line"); 
+int integar1 = 10; 
+int integar2 = 11; 
+print(integar1.toString() + " " + integar2.toString()); 
+/********* Question No. 3 ************/ 
+print("Question No. 3: Temperature Conversion"); 
+double tempCelcius = 37; 
+double tempFaren = 98.6; 
+double celToFaren = (tempCelcius * 1.8) + 32; 
+double farenToCel = ((tempFaren - 32) * .5556); 
+print (tempCelcius.toString() + "°C is " + celToFaren.toString() + "°F"); 
+print (tempFaren.toString() + "°F is " + farenToCel.toString() + "°C"); 
+/********* Question No. 4 ************/ 
+print("Question No. 4: Age Calculator"); 
+int birthYear = 1992; 
+int futureYear = 2024; 
+int futureAge = futureYear - birthYear; 
+print ("So: I will be " + futureAge.toString() +" in " + futureYear.toString()); 
+/********* Question No. 5 ************/ 
+print("Question No. 5: Arithmetics"); 
+var number1 = 20; 
+var number2 = 10; 
+var addition = number1 + number2; 
+var subtraction = number1 - number2; 
+var multiplication = number1 * number2; 
+var division = number1 / number2; 
+print("Addition = " + addition.toString()); 
+print("Subtraction = " + subtraction.toString()); 
+print("Multiplication = " + multiplication.toString()); 
+print("Division = " + division.toString()); 
+}
