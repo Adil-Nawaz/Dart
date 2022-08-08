@@ -1,0 +1,115 @@
+void main()
+{
+  /************** QUESTION NO.1 ***************/
+  //Write a program to find the sum of first 10 natural numbers.
+  print("/************** QUESTION NO.1 ***************/\n");
+    int sumOfNaturalNumbers = 0;
+  for (int i=0; i < 10; i++)
+  {
+    sumOfNaturalNumbers += i;
+  }
+ 
+  /************** QUESTION NO.2 ***************/
+  //Write a program to display the sum of first 10 natural numbers.
+  print("/************** QUESTION NO.2 ***************/");
+    int sumOf10NaturalNumbers = 0;
+  for (int i=1; i < 10; i++)
+  {
+    sumOf10NaturalNumbers += i;
+  }
+  print("Sum of first 10 Natural Numbers is = $sumOf10NaturalNumbers\n");
+  
+  /************** QUESTION NO.3 ***************/
+  //Write a program to print table of 5.
+  print("/************** QUESTION NO.3 ***************/");
+    for (int i = 1; i <=10; i++)
+    {
+      int tableOf5 = 5*i; 
+      print("5 x $i = $tableOf5");
+    }
+      print("\n");
+  /************** QUESTION NO.4 ***************/
+  //Write a program to print natural numbers in reverse (from 10 to 1).
+  print("/************** QUESTION NO.4 ***************/");
+  for (int i = 10; i>0; i--)
+  {
+    print(i);
+  }
+    print("\n");
+  
+   /************** QUESTION NO.5 ***************/
+  //Write a program to print all even numbers between 1 to 100.
+  print("/************** QUESTION NO.5 ***************/");
+  for (int i = 1; i<=100; i++)
+  {
+    if(i % 2 == 0){
+      print("Even $i");
+    }
+  }
+      print("\n");
+  /************** QUESTION NO.6 ***************/
+  //Write a program to print all Odd numbers between 1 to 100.
+  print("/************** QUESTION NO.6 ***************/");
+  for (int i = 1; i<=100; i++)
+  {
+    if(i % 2 == 1){
+      print("Odd $i");
+    }
+  }
+      print("\n");
+  /************** QUESTION NO.7 ***************/
+  //Write a program to print sum of all even numbers between 1 to 100.
+  print("/************** QUESTION NO.7 ***************/");
+   int sumOfEven = 0;
+  for (int i = 1; i<=100; i++)
+  { 
+    if(i % 2 == 0){
+      sumOfEven +=i;
+    }
+  }
+  print("Sum of Even numbers between 1 to 100 is $sumOfEven");
+  print("\n");
+  
+  /************** QUESTION NO.8 ***************/
+  //Write a program to print the numbers and sum of all integer between 100 and 200 which are divisible by 9.
+  print("/************** QUESTION NO.8 ***************/");
+  int sum = 0;
+  for (int i = 100; i<=200; i++)
+  {
+    if (i % 9 == 0){
+       sum += i;
+      print(i);
+    }
+  }
+  print("Their Sum $sum");
+  
+  /************** QUESTION NO.9 ***************/
+  //Write a program in to display the pattern like right angle triangle using an asterisk.
+  print("/************** QUESTION NO.9 ***************/");
+  String str = "";
+  for(int i=0; i<=4; i++)
+  {
+    str=str+"*";
+    print(str);
+  }
+  
+  /************** QUESTION NO.10 ***************/
+  //Write a program to display the pattern like right angle triangle with a number.
+  print("/************** QUESTION NO.10 ***************/");
+  String str2 = "";
+  for(int i=1; i<=4; i++)
+  {
+    str2=str2+i.toString();
+    print(str2);
+  }
+  
+  /************** QUESTION NO.11 ***************/
+  //Write a program to make such a pattern like right angle triangle with a number which will repeat a number in a row.
+  print("/************** QUESTION NO.11 ***************/");
+  String str3 ="";
+  for(int i=1; i<=4; i++)
+  {
+    str3=str3 + i.toString() + i.toString();
+    print(str3);
+  }
+}
