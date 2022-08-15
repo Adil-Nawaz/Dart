@@ -1,0 +1,132 @@
+
+void main()
+{
+  /* Q1. Write a program to find the square of any number using the 
+   * function, for example if we pass 5 as param then function will 
+   * print 25? */
+  print("Question No. 01");
+  int nbr = 10;
+  print("Square of $nbr is " + squareFunc(nbr).toString());
+  
+  /* Q2. Write a program to check a given number is even or odd 
+   * using the function, for example if we pass 5 as param then 
+   * function will print “5 is an odd number" */
+  print("Question No. 02");
+  print("The number is " + evenOddFunc(1));
+  
+  /* Q3. Write a program to find out maximum and minimum number 
+   * using function, for example if we pass 5 & 10 as parameters 
+   * then function will print "10 is greater than 5" */
+  print("Question No. 03");
+  int num1 = 20, num2 = 11;
+  print(maxMinFunc(num1,num2).toString() + " is greater");
+  
+  /* Q. Write a program that sends an integer number to a function 
+   * and function finds the sum of all natural numbers upto that 
+   * number. for example if we pass 10 then function will print the 
+   * sum of all numbers from 1 to 10 */
+  print("Question No. 04");
+  int number = 10;
+  print("The sum of integers from $number to 0 is " + sumFunc(number)
+        .toString());
+  
+  /* Q5. Write a function to find the Max of three numbers. for example
+   * if we pass 10,20,30 as parameters then function will print “30 is 
+   * the largest” */
+  print("Question No. 05");
+  print(maxNumFunc(10,0,11));
+  
+  /* Q6. Write a function that takes a list (list can have duplicate 
+   * values) as parameter and returns a new list with unique elements of the 
+   * first list */
+  print("Question No. 06");
+  uniqueNum({1,2,3,3,3,4,4,5,6});
+  
+  /* Q7. Write a function to check if a character is alphanumeric, lower case, 
+   * upper case or numeric. For example if we pass ‘G’ as parameter then function 
+   * will print “G is a character” */
+  print("Question No. 07");
+  String char= "T";
+  charCheck(char);
+  
+}
+
+  void charCheck(String str){  
+  int asciiNum =str.codeUnitAt(0);
+ 
+    if (asciiNum >= 65 && asciiNum <=90 )
+  {
+    print("Character $str is Uppercase");
+  } else if (asciiNum >= 97 && asciiNum <=122)
+  {
+    print("Character $str is Lowercase");
+  } else if (asciiNum >= 48 && asciiNum <=57 )
+  {
+    print ("Character $str is Numeric");
+  }
+    else
+  {
+    print("Not defined");
+  }
+  }
+
+ void uniqueNum(Set intSet)
+ {
+      for (var i in intSet)
+   {
+     print(i) ;
+   }
+ }
+  String maxNumFunc(int nume1, int nume2, int nume3)
+{
+  if (nume1 > nume2 && nume1> nume3 && nume1!=nume2 && nume2!=nume3 && nume1!=nume3)
+  {
+    return "$nume1 is larger than $nume2 & $nume3";
+  } else if (nume2>nume1 && nume2>nume3 && nume2!=nume1 && nume2!=nume3 && nume1!=nume3)
+  {
+    return "$nume2 is larger than $nume1 & $nume3";
+  } else if (nume3>nume1 && nume3>nume2 && nume3!=nume1 && nume3!=nume2 && nume1!=nume2 )
+  {
+    return "$nume3 is larger than $nume1 & $nume2";
+  } else
+  {
+    return "Number input error";
+  }
+}
+
+int sumFunc(int number)
+{
+  int sum = 0;
+  for (int i=0; i<=number; i++)
+  {
+    sum += i;
+  }
+  return sum;
+}
+int maxMinFunc(int num1, int num2)
+{
+  if (num1 > num2)
+  {
+    return num1;
+  } else {
+    return num2;
+  }
+}
+String evenOddFunc(int nbr)
+{
+  if(nbr %2 == 0)
+  {
+    return "Even";
+  } else if(nbr %2 == 1)
+  {
+    return "Odd";
+  } else {
+    return "Not defined";
+  }
+}
+
+int squareFunc(int nbr)
+{
+  int sqr =nbr * nbr;
+  return sqr;
+}
