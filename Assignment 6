@@ -1,0 +1,118 @@
+void main()
+{
+  print ("QUESTION NO. 1");
+ Car myCar = Car();
+  myCar.diplayCarValues("2009", "Honda", 12344554.34,"Adil");
+}
+ class Car{
+    
+    //Attributes
+    late String carModel;
+    late String carName;
+    late double carPrice;
+    late String carOwner;
+    
+    //Methods
+    
+   void diplayCarValues(carModel, carName, carPrice, carOwner)
+   {
+     this.carModel = carModel;
+     this.carName  = carName;
+     this.carPrice = carPrice;
+     this.carOwner = carOwner;
+     print("Car Model is $carModel");
+     print("Car Name is $carName");
+     print("Car Price is $carPrice");
+     print("Car Owner is $carOwner");
+   }
+  }
+  
+  void main()
+{
+  print("QUESTION NO. 02");
+  Average avg =Average();
+  avg.getAverage(4,6,90);
+}
+class Average{
+  //Attributes
+  late int num1;
+  late int num2;
+  late int num3;
+  
+  //Methods
+  void getAverage(num1,num2,num3)
+  {
+    this.num1 = num1;
+    this.num2 = num2;
+    this.num3 = num3;
+    double average = (num1+num2+num3)/3;
+    print("The average of 3 given numbers is $average");
+  }
+}
+
+void main()
+{
+  print("QUESTION NO. 03");
+ Complex complex = Complex();
+  complex.sum(12,12);
+  complex.difference(20,10);
+  complex.multiply(2,2);
+}
+class Complex{
+  //Attributes
+  late int realNo1;
+  late int realNo2;
+  
+  //Methods
+  void sum(realNo1, realNo2)
+  {
+    this.realNo1 = realNo1;
+    this.realNo2 = realNo2;
+    int sum = realNo1 + realNo2;
+    print("Sum of $realNo1 & $realNo2 is $sum");
+  }
+     void difference(realNo1, realNo2)
+  {
+    this.realNo1 = realNo1;
+    this.realNo2 = realNo2;
+    int diff = realNo1 - realNo2;
+    print("Difference of $realNo1 & $realNo2 is $diff");
+  }
+     void multiply(realNo1, realNo2)
+  {
+    this.realNo1 = realNo1;
+    this.realNo2 = realNo2;
+    int mul = realNo1 * realNo2;
+    print("Multiplication of $realNo1 & $realNo2 is $mul");
+  }
+}
+
+
+void main()
+{
+  Employee emp = Employee();
+  emp.getInfo("Umar", 10, 45);
+  emp.printSalary();
+}
+class Employee{
+  //Attributes
+  late String empName;
+  late int hourlyRate;
+  late int workingHours;
+  late int salary;
+  
+  //Methods
+  void getInfo(empName, rate, hours)
+  {
+    this.empName = empName;
+    this.hourlyRate = rate;
+    this.workingHours = hours;
+    this.salary = rate * hours;
+  }
+  
+  void printSalary()
+  {
+    print("Employee name is $empName");
+    print("Employee salary is $salary");
+  }
+}
