@@ -1,0 +1,213 @@
+void main()
+{
+  print("QUESTION NO. 01");
+  Student std1 = Student();
+  print("Printing Student1 details with Constructor");
+  std1.getInfo();
+  
+  print("Printing Student2 details with setInfo Function");
+  Student std2 = Student();
+  std2.setInfo("Adil", 30,"Gujrat");
+  std2.getInfo();
+
+  print("Printing Student3 details with Constructor");
+  Student std3 = Student();
+  std3.getInfo();
+}
+class Student{
+  late String name;
+  late int    age;
+  late String address;
+  Student()
+  {
+    name    = "unknown";
+    age     = 0;
+    address = "not available"; 
+  }
+ 
+  void setInfo ([name, age, address])
+  {
+    this.name    = name;
+    this.age     = age;
+    this.address = address;
+  }
+  void getInfo()
+  {
+    print("Student name is: $name");
+    print("Student age is: $age");
+    print("Student address is: $address");
+  }
+}
+
+
+void main()
+{
+  print("QUESTION NO. 02");
+  print("Printing area with constructor with no Parameters");
+  Rectangle rect1 = Rectangle();
+  print("Printing area with constructor with two Parameters");
+  Rectangle rect2 = Rectangle.n(10,10);
+  print("Printing area with constructor with one Parameters");
+  Rectangle rect3 = Rectangle.m(11);
+  print("Printing area with constructor with Function");
+  Rectangle rect4 = Rectangle();
+  rect4.area(20,20);
+}
+
+class Rectangle{
+  late int length;
+  late int breadth;
+  
+  Rectangle()
+  {
+    this.length  = 0;
+    this.breadth = 0;
+    print("The area is " + (this.length * this.breadth).toString());
+  }
+  Rectangle.n(int length, int breadth)
+  {
+    this.length  = length;
+    this.breadth = breadth;
+    print("The area is " + (this.length * this.breadth).toString());
+  }
+  Rectangle.m(int number)
+  {
+    this.length  = number;
+    this.breadth = number;
+    print("The area is " + (this.length * this.breadth).toString());
+  }
+  void area(int length, int breadth)
+  {
+    this.length  = length;
+    this.breadth = breadth;
+    print("The area is " + (this.length * this.breadth).toString());
+  }
+  
+    
+}
+
+void main()
+{
+  print("QUESTION NO. 03");
+  AddAmount obj1 = AddAmount();
+  AddAmount obj2 = AddAmount.m(200);
+  
+}
+
+class AddAmount{
+  int amount = 500;
+  
+  AddAmount()
+  {
+    this.amount = 500;
+    print("Printing amount with constructor having no parameter " + this.amount.toString());  
+  }
+  AddAmount.m(int amount)
+  {
+    this.amount += amount;
+    print("Printing amount with constructor having one parameter " + this.amount.toString());
+  }
+}
+
+void main()
+{
+  print("QUESTION NO. 04");
+  print("Printing output without passing anything");
+  Programming prg1 = Programming();
+  print("Printing output when String is passed");
+  Programming prg2 = Programming.m("Dart");
+}
+
+class Programming{
+  late String prg;
+  
+  Programming()
+  {
+    print("I Love programming Languages");
+  }
+  Programming.m(String name)
+  {
+    this.prg = name;
+    print("I love " + this.prg);
+  }
+}
+
+void main ()
+{
+  print("QUESTION NO. 05");
+//   print("The time is" + this.hours.toString() + "hrs:" + this.minutes.toString() + 
+//           "min:" + this.seconds.toString() + "sec:");
+  print("Printing time with constructor having no parameter");
+  Time time1 =Time();
+  time1.displayTime();
+  print("Printing time with constructor having parameters");
+  Time time2 =Time.m(12,45,30);
+  time2.displayTime();
+  print("Printing time with constructor having wrong parameters");
+  Time time3 =Time.m(25,61,60);
+  time3.displayTime();
+  print("Printing time with function");
+  Time time4 =Time();
+  time4.setTime(24,50,68);
+  time4.displayTime(); 
+}
+class Time{
+  late int hours;
+  late int minutes;
+  late int seconds;
+  
+  Time()
+  {
+    this.hours   = 00;
+    this.minutes = 00;
+    this.seconds = 00;
+  }
+  Time.m(hrs, mins, sec)
+  {
+    if (hrs<=24)
+    {
+    this.hours = hrs;
+    }else {
+      this.hours = 00;
+    }
+     if (mins<=60)
+    {
+    this.minutes = mins;
+    }else {
+      this.minutes = 00;
+    }
+     if (sec<=60)
+    {
+    this.seconds = sec;
+    }else {
+      this.seconds = 00;
+    }
+  }
+  void setTime(hrs, mins, sec)
+  {
+    if (hrs<=24)
+    {
+    this.hours = hrs;
+    }else {
+      this.hours = 00;
+    }
+     if (mins<=60)
+    {
+    this.minutes = mins;
+    }else {
+      this.minutes = 00;
+    }
+     if (sec<=60)
+    {
+    this.seconds = sec;
+    }else {
+      this.seconds = 00;
+    }
+
+  }
+  void displayTime()
+  {
+    print("The time is $hours hrs: $minutes min: $seconds sec");
+  }
+}
+
