@@ -211,3 +211,142 @@ class Time{
   }
 }
 
+void main()
+{
+  print("QUESTION NO. 06");
+  print("Printing using no parameter constructor");
+  Laptop laptop1 = Laptop();
+  laptop1.bootWindow();
+  print("Printing using parameterized constructor");
+  Laptop laptop2 = Laptop.m("DELL" , "i5-7th Gen", 16, 1024);
+  laptop2.bootWindow();
+  
+}
+class Laptop{
+  late String brandName;
+  late String modelName;
+  late int ram;
+  late int hDD;
+  Laptop()
+  {
+    brandName = "unknown";
+    modelName = "not-available";
+    ram = 0;
+    hDD = 0;
+  }
+    Laptop.m(bN,mN,ram,hDD)
+  {
+    this.brandName = bN;
+    this.modelName = mN;
+    this.ram = ram;
+    this.hDD = hDD;
+  }
+  void bootWindow()
+  {
+    print(this.brandName + " Laptop window is loading....");
+    print("Laptop specs are: " + this.modelName + " " + this.ram.toString() + " " + 
+          this.hDD.toString());
+  }
+    
+}
+
+class Furniture{
+  late String furnitureName;
+  late String brandName;
+  late int price;
+  late bool warranty;
+  Furniture()
+  {
+    furnitureName = " ";
+    brandName     = " ";
+    price         = 0;
+    warranty      = false;
+  }
+  Furniture.m(fN,bN,price,warr)
+  {
+    this.furnitureName = fN;
+    this.brandName     = bN;
+    this.price         = price;
+    this.warranty      = warr;
+  }
+  void showFurnitureSpecs ()
+  {
+    print("Furniture specs are:" + this.furnitureName + this.brandName + 
+          this.price.toString()+ this.warranty.toString());
+  }
+}
+class SmartPhone{
+  late String brandName;
+  late String modelName;
+  late int ram;
+  late int storage;
+  SmartPhone()
+  {
+    brandName = " ";
+    modelName = " ";
+    ram = 0;
+    storage = 0;
+  }
+  SmartPhone.m(bN,mN,ram,str)
+  {
+    this.brandName = bN;
+    this.modelName = mN;
+    this.ram = ram;
+    this.storage = str;
+  }
+   void showPhoneSpecs ()
+  {
+    print("SmartPhone specs are:" + this.brandName + this.modelName + 
+          this.ram.toString()+ this.storage.toString());
+  }
+}
+class Fruit{
+  late String fruitName;
+  late String fruitColor;
+  late String fruiteTaste;
+  late int    fruitePrice;
+  Fruit()
+  {
+     fruitName   = " ";
+     fruitColor  = " "; 
+     fruiteTaste = " ";
+     fruitePrice =  0 ;
+  }
+  Fruit.m(fN,fC,fT,fP)
+  {
+     this.fruitName   = fN;
+     this.fruitColor  = fC; 
+     this.fruiteTaste = fT;
+     this.fruitePrice = fP;
+  }
+   void showFruitSpecs ()
+  {
+    print("Fruit specs are:" + this.fruitName + this.fruitColor + 
+          this.fruiteTaste + this.fruitePrice.toString());
+  }
+}
+class Fan{
+  late String fanBrand;
+  late String fanModel;
+  late String fanType;
+  late int    fanPrice;
+  Fan()
+  {
+    fanBrand  = " ";
+    fanModel  = " ";
+    fanType   = " ";
+    fanPrice  =  0 ;
+  }
+  Fan.m(fB,fM,fT,fP)
+  {
+    this.fanBrand  = fB;
+    this.fanModel  = fM;
+    this.fanType   = fT;
+    this.fanPrice  = fP;
+  }
+   void showFanSpecs ()
+  {
+    print("Fan specs are:" + this.fanBrand + this.fanModel + 
+          this.fanType + this.fanPrice.toString());
+  }
+}
