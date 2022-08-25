@@ -1,0 +1,35 @@
+void main()
+{
+ PrintInteger integer= PrintInteger();
+ integer.intData = 1;
+  integer.listData = [2,3,4,5,6];
+  integer.mapData = {"one" : "dataone"};
+  integer.printData();
+  
+}
+
+class PrintInteger
+{
+  late int intData;
+  late List listData;
+  late Map  mapData;
+  
+//   PrintInteger(int intData, List listData, Map mapData)
+//   {
+//     this.intData = intData;
+//     this.listData = listData;
+//     this.mapData = mapData;
+//   }
+  void printData(){
+    print("Int type data is " + this.intData.toString());
+    print("list type data is ");
+    for(var n in this.listData){
+      print(n);
+    }
+    print("map type data is ");
+    for (var index in this.mapData.values)
+    {
+      print(index);
+    }
+    }
+ }
